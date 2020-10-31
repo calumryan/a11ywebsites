@@ -1,0 +1,33 @@
+---
+permalink: feed.xml
+eleventyNavigation:
+  key: RSS
+  order: 3
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ meta.title }}</title>
+    <subtitle>{{ meta.description }}</subtitle>
+    <link href="{{ meta.url }}/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="{{ meta.url }}" rel="alternate" type="text/html"/>
+    <author>
+        <name>{{ meta.title }}</name>
+    </author>
+    {% if collections.posts %}
+    <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+    {% endif %}
+    <id>{{ meta.url }}/</id>
+    {%- for post in collections.posts | reverse -%}
+        <entry>
+            <title>{{ post.data.title }}</title>
+            <link href="{{ post.data.url }}"/>
+            <updated>{{ post.date | rssDate }}</updated>
+            <id>{{ post.data.url }}</id>
+            <content type="html"><![CDATA[
+                {% if post.data.image %}<img src="{{ meta.url }}/assets/images/screenshots/{{ post.data.image }}" alt="" />{% endif %}
+                {{ post.templateContent | safe }}
+                <a href="{{ post.data.url }}">{{ post.data.url }}</a>
+            ]]></content>
+        </entry>
+    {%- endfor -%}
+</feed>

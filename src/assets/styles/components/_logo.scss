@@ -1,0 +1,13 @@
+.logo {
+    fill: currentColor;
+}
+
+.header__logo {
+    &:hover .logo {
+        animation: tada 1s forwards;
+    }
+
+    &:focus .logo {
+        fill: $brand-lime;
+    }
+}

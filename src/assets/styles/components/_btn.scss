@@ -1,0 +1,66 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid $brand-color-primary;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.65;
+    }
+}
+
+.btn--primary {
+    background-color: #fff;
+    border-color: transparent;
+    color: $brand-color-primary;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: all 0.15s ease;
+
+    @include hover-focus {
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50, 50, 50, 0.1),
+            0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    &:focus {
+        background-color: $brand-pink;
+    }
+
+    &:active {
+        background-color: $brand-color-primary-offset;
+        transform: translateY(1px);
+        box-shadow: 0 3px 12px -2px inset rgba(50, 50, 50, 0.25);
+    }
+}
+
+.btn--link {
+    text-transform: none;
+    text-decoration: underline;
+    border-color: transparent;
+
+    @include hover-focus {
+        text-decoration: none;
+    }
+}

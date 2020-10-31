@@ -1,0 +1,41 @@
+---
+layout: base
+title: A11Y Websites
+description: "Showcase of accessible websites"
+pagination:
+  data: collections.posts
+  size: 10
+  alias: posts
+---
+
+<article class="page">
+    <header class="page__header">
+        <h1 class="page__title">
+            A11Y Websites
+        </h1>
+        <p class="page__description lead">{{ description | safe }}.</p>
+        <p>These websites have been assesed through both automated and manual testing against the success criteria set out in the Website Content Acccessibility Guidliness (WCAG) 2.1 to level AA and above.</p>
+    </header>
+
+    <div class="page__content">
+        
+        {% if posts.length %}
+            <ul class="cards">
+                {% for post in posts %}
+                    <li>
+                        {% include "post.njk" %}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            {% if pagination.nextPageHref %}
+                <nav class="pagination js-infinitescroll-pagination">
+                    <a href="{{ pagination.nextPageHref }}" class="btn btn--primary">more accessible websites</a>
+                </nav>
+            {% endif %} 
+        {% else %}
+            <p>No websites yet.</p>
+        {% endif %}
+
+    </div>
+</article>

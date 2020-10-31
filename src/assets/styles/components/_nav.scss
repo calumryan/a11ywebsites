@@ -1,0 +1,20 @@
+.nav {
+    &__link {
+        display: block;
+        font-weight: 700;
+        padding: 0.5em 1em;
+        @include hover-focus;
+    }
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        font-family: $font-family-display;
+
+        @include mq(lg) {
+            display: block;
+            text-align: right;
+        }
+    }
+}

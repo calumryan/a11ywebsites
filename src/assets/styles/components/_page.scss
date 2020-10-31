@@ -1,0 +1,22 @@
+.page {
+    &__header {
+        text-align: center;
+        @include mq(lg) {
+            text-align: left;
+        }
+    }
+
+    &__header,
+    &__content {
+        padding: 1rem 0;
+
+        li > a,
+        p > a {
+            @include hover-focus;
+        }
+    }
+
+    &__content > * + * {
+        margin-top: 1rem;
+    }
+}
