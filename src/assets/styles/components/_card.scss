@@ -3,32 +3,32 @@
     margin: 0;
     padding: 0;
 }
-  
+
 .card {
-    margin: 2rem 0;
+    margin: 0 0 3rem 0;
     padding: 1rem;
-    border-radius: 3px;
     border: 2px $brand-white solid;
-    border-radius: .6em;
+    border-radius: 0.6em;
     background-color: $brand-blue;
 
     /* End of moving the image above the heading */
-    > * a, > .cta {
+    > * a,
+    > .cta {
         display: block;
     }
 
     h2 {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         @include underline-decorated;
         font-family: $font-family-display;
     }
-  
+
     h2 > a {
         text-decoration: none;
         color: inherit;
     }
 }
-  
+
 /* Start of moving the image above the heading */
 .reorder {
     display: flex;
@@ -38,10 +38,10 @@
         max-width: 100%;
         height: auto;
         order: -1;
-        margin-bottom: .75rem;
+        margin-bottom: 0.75rem;
     }
 }
-  
+
 .linkify:hover {
     cursor: pointer;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
@@ -61,4 +61,3 @@
 .isfocused a:focus {
     outline: none;
 }
-  
