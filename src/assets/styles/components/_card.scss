@@ -29,6 +29,12 @@
     }
 }
 
+.card-meta {
+    margin: 1rem 0 0 0;
+    text-align: right;
+    font-family: $font-family-display;
+}
+
 /* Start of moving the image above the heading */
 .reorder {
     display: flex;

@@ -2,6 +2,9 @@
 <article class="card reorder">
     <h2><a href="{{ post.data.url }}">{{ post.data.title }}</a></h2>
     {{ post.templateContent | safe }}
+    <div class="card-meta">
+        <time datetime="{{ post.date | rssDate }}">Audited {{ post.date | dateToFormat('dd/MM/yyyy') }}</time>
+    </div>
     {% if post.data.image %}
     <img src="/assets/images/screenshots/{{ post.data.image }}" width="640" height="360" loading="lazy" alt="" />
     {% endif %}
