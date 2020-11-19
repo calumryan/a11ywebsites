@@ -1,8 +1,8 @@
 # A11Y Websites
 
-Showcase of accessible websites built to meet WCAG 2.1 success criteria to level AA. 
+Showcase of accessible websites built to meet WCAG 2.1 success criteria to grade AA.
 
-[a11ywebsites.com](https://www.a11ywebsites.com) 
+[a11ywebsites.com](https://www.a11ywebsites.com)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5dbfbb5d-30af-4eb0-a732-7bcc3caf1315/deploy-status)](https://app.netlify.com/sites/a11ywebsites/deploys)
 
