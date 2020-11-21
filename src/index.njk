@@ -5,7 +5,7 @@ meta_title: Home
 description: "Showcase of accessible websites"
 pagination:
   data: collections.posts
-  size: 10
+  size: 5
   alias: posts
 ---
 
@@ -29,16 +29,19 @@ pagination:
                 {% endfor %}
             </ul>
 
-            {% if pagination.nextPageHref %}
-                <nav class="pagination js-infinitescroll-pagination">
-                    <a href="{{ pagination.nextPageHref }}" class="btn btn--primary">more accessible websites</a>
+            {% if collections.posts.length > pagination.size %}
+                <nav class="pagination" aria-label="Pagination links">
+                    {% if pagination.href.previous %}
+                    <a class="nav__link" href="{{ pagination.href.previous }}" data-direction="backwards">{% icon "arrow" %}Newer features</a>{% endif %}
+                    {% if pagination.href.next %}<a class="nav__link" href="{{ pagination.href.next }}" data-direction="forwards">Later features{% icon "arrow" %}</a>{% endif %}
                 </nav>
             {% endif %} 
+
         {% else %}
             <p>No websites yet.</p>
         {% endif %}
 
-        <a class="nav__link" href="#header">Back to top of page</a>
+        <a class="nav__link nav__center" href="#header" data-direction="up">{% icon "arrow" %}Back to top of page</a>
 
     </div>
 </article>

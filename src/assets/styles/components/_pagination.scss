@@ -1,4 +1,19 @@
 .pagination {
-    padding: 2rem 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    .nav__link {
+        display: inline-flex;
+        align-items: baseline;
+        padding: 0;
+    }
+
+    svg {
+        pointer-events: none;
+        height: 1.5ex;
+        width: auto;
+    }
 }
