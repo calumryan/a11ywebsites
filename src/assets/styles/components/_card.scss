@@ -21,11 +21,20 @@
         margin-bottom: 0.5rem;
         @include underline-decorated;
         font-family: $font-family-display;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     h2 > a {
         text-decoration: none;
         color: inherit;
+
+        &:focus {
+            background-color: $brand-white;
+            color: $brand-blue;
+        }
     }
 }
 
