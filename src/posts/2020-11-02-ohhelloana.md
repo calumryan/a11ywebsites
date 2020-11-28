@@ -5,4 +5,4 @@ image: ohhelloana.jpg
 wcag_grade:
 ---
 
-Ana Rodrigues' website almost meets grade AA overall. Structure and colour choices are good, however the sites lacks a mechanism to bypass repeated blocks such as the primary navigation although relatively small.
+Ana Rodrigues' website almost meets grade AA overall. Structure and colour choices are good, however the site lacks a mechanism to bypass repeated blocks such as the primary navigation although relatively small.
