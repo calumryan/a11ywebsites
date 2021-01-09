@@ -31,9 +31,9 @@ pagination:
 
             {% if collections.posts.length > pagination.size %}
                 <nav class="pagination" aria-label="Pagination links">
+                    {% if pagination.href.next %}<a class="nav__link" href="{{ pagination.href.next }}" data-direction="backwards">{% icon "arrow" %}Later features</a>{% endif %}
                     {% if pagination.href.previous %}
-                    <a class="nav__link" href="{{ pagination.href.previous }}" data-direction="backwards">{% icon "arrow" %}Newer features</a>{% endif %}
-                    {% if pagination.href.next %}<a class="nav__link" href="{{ pagination.href.next }}" data-direction="forwards">Later features{% icon "arrow" %}</a>{% endif %}
+                    <a class="nav__link" href="{{ pagination.href.previous }}" data-direction="forwards">Newer features{% icon "arrow" %}</a>{% endif %}
                 </nav>
             {% endif %} 
 
