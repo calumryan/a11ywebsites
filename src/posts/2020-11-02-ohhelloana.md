@@ -2,7 +2,7 @@
 title: ohhelloana.blog
 url: https://ohhelloana.blog
 image: ohhelloana.jpg
-wcag_grade:
+wcag_grade: AA
 ---
 
-Ana Rodrigues' website almost meets grade AA overall. Structure and colour choices are good, however the site lacks a mechanism to bypass repeated blocks such as the primary navigation although relatively small.
+Ana Rodrigues' website meets grade AA overall. Structure and colour choices are good along with well structured landmarks.

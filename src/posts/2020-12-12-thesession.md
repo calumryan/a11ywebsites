@@ -2,6 +2,7 @@
 title: thesession.org
 url: https://thesession.org
 image: thesession.jpg
+wcag_grade: AA
 ---
 
-The Session website comes close to meeting grade AA overall but fails with poor colour contrast on links which also aren't underlined and form controls with poor focus indicator visibility. The website also includes some broken ARIA references, videos without captions and numerous other accessibility issues related to embedded YouTube videos.
+The Session website meets grade AA overall with some additional accessible features such as a bypass link for reaching the main navigation.

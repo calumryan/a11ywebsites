@@ -2,6 +2,7 @@
 title: francoscarpa.com
 url: https://francoscarpa.com
 image: francoscarpa.jpg
+wcag_grade: AA
 ---
 
-Franco Scarpa's website nearly meets grade AA overall. The website makes good use of landmarks throughout however lacks a mechanism to bypass repeated blocks such as the primary navigation.
+Franco Scarpa's website nearly meets AA overall with good use of landmarks throughout and good colour choices.
