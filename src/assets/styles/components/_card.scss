@@ -10,6 +10,7 @@
     border: 2px $brand-white solid;
     border-radius: 0.6em;
     background-color: $brand-blue;
+    position: relative;
 
     /* End of moving the image above the heading */
     > * a,
@@ -44,6 +45,16 @@
     margin: 1rem 0 0 0;
     text-align: right;
     font-family: $font-family-display;
+}
+
+.card-ribbon {
+    background-color: $brand-white;
+    color: $brand-blue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0 0 0 0.6rem;
 }
 
 /* Start of moving the image above the heading */
