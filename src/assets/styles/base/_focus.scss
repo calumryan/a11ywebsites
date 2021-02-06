@@ -13,7 +13,7 @@ input:focus {
 // =================
 
 .js-focus-visible :focus:not(.focus-visible) {
-    outline: none;
+    outline-color: transparent;
 }
 
 .js-focus-visible .focus-visible {
@@ -30,10 +30,10 @@ input:focus {
 
 // the skip link is only visible on focus
 .sr-skip-link:focus {
-    outline: none;
+    outline-color: transparent;
 }
 
 // links that are both focused AND hovered
 a:focus:hover {
-    outline: none;
+    outline-color: transparent;
 }
