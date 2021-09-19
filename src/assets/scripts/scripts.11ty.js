@@ -1,8 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
+const MemoryFileSystem = require('memory-fs')
 
 const isProd = process.env.ELEVENTY_ENV === 'production'
+const mfs = new MemoryFileSystem()
 
 // main entry point name
 const ENTRY_FILE_NAME = 'main.js'
@@ -11,6 +13,7 @@ module.exports = class {
     // Configure Webpack in Here
     async data() {
         const entryPath = path.join(__dirname, `/${ENTRY_FILE_NAME}`)
+        const outputPath = path.resolve(__dirname, '../../memory-fs/js/')
 
         // Transform .js files, run through Babel
         const rules = [
@@ -35,6 +38,7 @@ module.exports = class {
         const webpackConfig = {
             mode: isProd ? 'production' : 'development',
             entry: entryPath,
+            output: { path: outputPath },
             module: { rules },
             plugins: [envPlugin]
         }
