@@ -1,45 +1,40 @@
 {
     "name": "A11Ywebsites",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Showcase of accessible websites",
-    "scripts": {
-        "start": "npm run dev",
-        "dev": "run-s clean eleventy:dev --print-label",
-        "build": "run-s clean eleventy:prod --print-label",
-        "eleventy:dev": "cross-env ELEVENTY_ENV=development eleventy --serve",
-        "eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
-        "clean": "del-cli dist",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/calumryan/A11Ywebsites"
-    },
-    "author": "Calum Ryan",
-    "license": "MIT",
-    "dependencies": {
-        "@11ty/eleventy": "^0.11.1",
-        "@11ty/eleventy-navigation": "^0.1.6",
-        "@11ty/eleventy-plugin-rss": "^1.1.0",
-        "@babel/core": "^7.12.13",
-        "@babel/preset-env": "^7.12.13",
-        "babel-loader": "^8.2.2",
-        "clean-css": "^4.2.3",
-        "critical": "^2.0.6",
-        "cssesc": "^3.0.0",
-        "del-cli": "^3.0.0",
-        "focus-trap": "^5.1.0",
-        "focus-visible": "^5.1.0",
-        "html-minifier": "^4.0.0",
-        "luxon": "^1.23.0",
-        "markdown-it": "^10.0.0",
-        "memfs": "^3.1.2",
-        "node-sass": "^4.13.1",
-        "npm-run-all": "^4.1.5",
-        "svg-sprite": "^1.5.0",
-        "webpack": "^4.46.0"
-    },
-    "devDependencies": {
-        "cross-env": "^7.0.3"
-    }
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
+		"start": "npx @11ty/eleventy --serve --quiet",
+		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+		"debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/calumryan/A11Ywebsites.git"
+	},
+	"author": {
+		"name": "Calum Ryan",
+		"email": "hello@calumryan.com",
+		"url": "https://calumryan.com/"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=14"
+	},
+	"bugs": {
+		"url": "https://github.com/calumryan/A11Ywebsites/issues"
+	},
+	"homepage": "https://github.com/calumryan/A11Ywebsites#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy-img": "^3.1.1",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-bundle": "^1.0.4",
+		"@11ty/eleventy-plugin-rss": "^1.2.0",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"luxon": "^3.3.0",
+		"markdown-it-anchor": "^8.6.7"
+	}
 }
