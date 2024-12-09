@@ -204,7 +204,7 @@ pre[class*="language-diff-"] {
 	--color-gray-90: #333;
 
 	--color-card-text: var(--color-gray-90);
-	--color-card-background: #fff;
+	--color-card-background: #FFF;
 
 	--background-color: #f7f7f7;
 	--theme-color: #373A9A;
@@ -214,9 +214,11 @@ pre[class*="language-diff-"] {
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
 
-	--focus-color: #fd0;
+	--focus-color: #c7ff00;
 
 	--syntax-tab-size: 2;
+
+	--layout-max: 700px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -277,7 +279,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family);
+	font-family: var(--font-family-sans-serif);
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
@@ -320,17 +322,32 @@ li {
 a {
 	color: var(--text-color-link);
 }
+a:not(.decorlink, .nav-item-link) {
+    text-decoration: underline;
+    text-decoration-color: currentcolor;
+    text-decoration-thickness: auto;
+    -webkit-text-decoration-color: var(--text-color);
+    text-decoration-color: var(--text-color);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .5rem
+}
 a:focus-visible {
 	background-color: var(--focus-color);
+	outline: 3px solid rgba(0, 0, 0, 0);
 	color: #000;
+	box-shadow: 0 -2px var(--focus-color), 0 4px #0b0c0c;
+}
+a:hover {
+	text-decoration: none;
+}
+[tabindex='-1']:focus {
+    outline: 0!important
 }
 
 main {
 
 }
-main :first-child {
-	margin-top: 0;
-}
+
 @media (min-width:40rem) {
 	main h1 {
 		font-size: 3.8rem;
@@ -397,6 +414,9 @@ header {
 	color: #fff;
 	font-family: var(--font-family-sans-serif);
 	margin: auto 0;
+}
+.home-link:focus-within path {
+	fill: #000;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -474,8 +494,9 @@ header {
 	font-weight: 600;
 }
 .nav a[href]:focus-visible {
-	color: var(--theme-color);
+	color: #000;
 	background-color: var(--focus-color);
+	text-decoration: none;
 }
 
 /* Posts list */
@@ -485,7 +506,7 @@ header {
 	padding-left: 0;
 }
 .postlist--articles {
-	max-width: 700px;
+	max-width: var(--layout-max);
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -509,6 +530,9 @@ header {
 	text-align: right;
 	margin-left: -1.5rem;
 }
+.postlist-item img {
+	margin-bottom: 1rem;
+}
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
@@ -516,6 +540,7 @@ header {
 }
 .postlist-date {
 	word-spacing: -0.5px;
+	margin-top: 1rem;
 }
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
@@ -606,9 +631,10 @@ h2 + .header-anchor {
 	position:relative;
 	-ms-flex-line-pack:start;
 	align-content:start;
-	background-color:var(--color-alt);
 	border-bottom:2px dashed var(--color-primary);
-	padding:2rem clamp(.5rem,5%,2rem)
+	padding:2rem clamp(.5rem,5%,2rem);
+	text-align: center;
+	justify-content: center;
 }
 
 .scroll-grid li img {
@@ -638,14 +664,62 @@ h2 + .header-anchor {
 .page-header {
 	padding: 2.5rem 0;
 	text-align: center;
+	max-width: var(--layout-max);
+	margin: 0 auto;
+}
+
+.page-header > * {
+	margin-bottom: 1.5rem;
 }
 
 .page-header :last-child {
 	margin-bottom: 0;
+}
+
+.page-header > p {
+	font-size: 1.25rem;
+}
+
+.sr-skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+    font-weight: 600
+}
+
+.sr-skip-link:active,
+.sr-skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal
+}
+
+.sr-skip-link:focus {
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    top: 0;
+    font-size: 1rem;
+    transform: translateX(-50%);
+    background-color: var(--focus-color);
+    color: #000;
+    border-radius: 0 0 .5rem .5rem;
+    padding: 1rem 1.5rem;
+    outline: 0;
+    white-space: nowrap;
+    text-decoration: none
 }</style>
 	</head>
 	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+		<a href="#content" class="sr-skip-link">Skip to main content</a>
 
 		<header>
 
@@ -664,9 +738,9 @@ h2 + .header-anchor {
 <nav class="nav-primary" aria-labelledby="nav-heading">
     <h2 id="nav-heading" class="visually-hidden">Top level navigation menu</h2>
     <ul class="nav">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/showcase/">Showcase</a></li>
-        <li class="nav-item"><a href="/guides/">Guides</a></li>
+        <li class="nav-item"><a class="nav-item-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-item-link" href="/showcase/">Showcase</a></li>
+        <li class="nav-item"><a class="nav-item-link" href="/guides/">Guides</a></li>
     </ul>
 </nav>
 
@@ -678,20 +752,18 @@ h2 + .header-anchor {
 
 		</header>
 
-		<main id="skip">
+		<main id="content">
 			<div class="container">
 			
 <article class="container">
 <div class="page-header">
 	<h1>sarahmhigley.com</h1>
-	<ul class="post-metadata">
-		<li><time datetime="2021-01-16">January 2021</time></li>
-		<li><a href="/tags/showcase/" class="post-tag">showcase</a>, </li>
-		<li><a href="/tags/showcase/" class="post-tag">showcase</a></li>
-	</ul>
+	<div class="post-metadata">
+		<time datetime="2021-01-16">January 2021</time>
+	</div>
 </div>
 
-<p>Sarah Higley's website meets grade AA overall. The blog has a growing collection of articles all focused on web accessibility which are faultlessly presented with good semantics and colour choices. Thoughtfully Sarah has refrained from publishing her talks until associated transcripts can be included.</p>
+<p>Sarah Higley's website meets grade overall. The blog has a growing collection of articles all focused on web accessibility which are faultlessly presented with good semantics and colour choices. Thoughtfully Sarah has refrained from publishing her talks until associated transcripts can be included.</p>
 
 </article>
 			</div>

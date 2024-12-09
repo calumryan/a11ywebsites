@@ -7,13 +7,9 @@ layout: layouts/base.njk
 <article class="container">
 <div class="page-header">
 	<h1>{{ title }}</h1>
-	<ul class="post-metadata">
-		<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDateShort }}</time></li>
-		{%- for tag in tags | filterTagList %}
-		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-		<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-		{%- endfor %}
-	</ul>
+	<div class="post-metadata">
+		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDateShort }}</time>
+	</div>
 </div>
 
 {{ content | safe }}

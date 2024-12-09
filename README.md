@@ -1,6 +1,6 @@
 # A11Y Websites
 
-Showcase of accessible websites built to meet WCAG 2.1 success criteria to grade AA.
+Showcase of accessible websites built to meet WCAG 2.1 success criteria to grade.
 
 [a11ywebsites.com](https://www.a11ywebsites.com)
 

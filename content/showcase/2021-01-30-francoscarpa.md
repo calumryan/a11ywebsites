@@ -2,9 +2,9 @@
 title: francoscarpa.com
 link: https://francoscarpa.com
 image: francoscarpa.jpg
-wcag_grade: AA
+
 updated: yes
-tags: showcase
+
 ---
 
-Franco Scarpa's website nearly meets AA overall with good use of landmarks throughout and good colour choices.
+Franco Scarpa's website nearly meets overall with good use of landmarks throughout and good colour choices.

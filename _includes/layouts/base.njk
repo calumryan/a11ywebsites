@@ -48,7 +48,7 @@
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 	</head>
 	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+		<a href="#content" class="sr-skip-link">Skip to main content</a>
 
 		<header>
 
@@ -90,7 +90,7 @@
 
 		</header>
 
-		<main id="skip">
+		<main id="content">
 			<div class="container">
 			{{ content | safe }}
 			</div>
