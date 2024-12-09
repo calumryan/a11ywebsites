@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Guides – A11Y Websites</title>
+		<meta name="description" content="Showcase of accessible websites.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="A11Y Websites">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="A11Y Websites">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+		<link rel="apple-touch-icon" href="images/icon.png" type="image/png" />
+		
+		<link rel="icon" href="/images/favicon-96.png" sizes="96x96" type="image/png" />
+		<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png" />
+		<link rel="icon" href="/images/favicon-16.png" sizes="16x16" type="image/png" />
+		<meta property="og:image" content="/images/cover.jpg">
+		<meta property="og:locale" content="en_gb">
+		<meta property="og:url" content="https://a11ywebsites.com/">
+		
+		<style>/* Message Box */
+.message-box {
+	--color-message-box: #ffc;
+
+	display: block;
+	background-color: var(--color-message-box);
+	color: var(--color-gray-90);
+	padding: 1em 0.625em; /* 16px 10px /16 */
+}
+.message-box ol {
+	margin-top: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	.message-box {
+		--color-message-box: #082840;
+	}
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family-sans-serif: "Merriweather Sans", sans-serif;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--color-card-text: var(--color-gray-90);
+	--color-card-background: #fff;
+
+	--background-color: #f7f7f7;
+	--theme-color: #373A9A;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--focus-color: #fd0;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: --color-gray-20;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #0e3154;
+
+		--color-card-text: var(--color-gray-20);
+		--color-card-background: #04192e;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.06s !important;
+        transition-duration: 0.06s !important;
+    }
+}
+
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+        transform: rotate3d(0, 0, 1, -6deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate3d(0, 0, 1, 6deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        transform: rotate3d(0, 0, 1, -6deg);
+    }
+}
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+html {
+	overflow-y: scroll;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: min(100ch,100vw - 2rem);
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--text-color-link);
+}
+a:focus-visible {
+	background-color: var(--focus-color);
+	color: #000;
+}
+
+main {
+
+}
+main :first-child {
+	margin-top: 0;
+}
+@media (min-width:40rem) {
+	main h1 {
+		font-size: 3.8rem;
+	}
+}
+header {
+	background-color: var(--theme-color);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 2em;
+}
+.home-link {
+	font-size: 2rem; /* 16px /16 */
+	font-weight: 700;
+	display: block;
+	color: #fff;
+	font-family: var(--font-family-sans-serif);
+	margin: auto 0;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+.home-link:not(.home-link--small):hover {
+	animation: tada 1s forwards;
+}
+.home-link svg {
+	fill: #fff;
+}
+.home-link--small {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	font-size: 1.8rem;
+	font-size: clamp(1rem,1rem + 5vw,1.8rem); */
+}
+.home-link--small svg {
+	width: 3rem;
+	height: 3rem;
+}
+.nav-primary {
+	display: flex;
+	justify-content: center;
+}
+.nav-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem 5rem;
+}
+@media (min-width:40rem) {
+	.nav-wrapper {
+		justify-content: space-between;
+	}
+}
+.nav-wrapper .nav-primary {
+	display: inline-flex;
+	margin: auto;
+}
+@media (min-width:40rem) {
+	.nav-wrapper .nav-primary {
+		margin: auto 0 auto auto;
+	}
+}
+/* Nav */
+.nav {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0;
+	margin: 0.5rem auto;
+	list-style: none;
+	gap: 1rem;
+}
+.nav-item {
+	font-weight: 700;
+	font-family: var(--font-family-sans-serif);
+}
+.nav-item a[href] {
+	display: block;
+	padding: 0.5rem 0.7rem;
+	border-radius: 0.5rem;
+}
+.nav-item a[href]:not(:hover) {
+	color: #fff;
+}
+.nav-item a[href]:hover {
+	text-decoration: none;
+	color: #fff;
+}
+.nav a[href][aria-current="page"] {
+	background-color: #fff;
+	color: var(--theme-color);
+	font-weight: 600;
+}
+.nav a[href]:focus-visible {
+	color: var(--theme-color);
+	background-color: var(--focus-color);
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 0;
+}
+.postlist--articles {
+	max-width: 700px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem 0;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+	color: var(--color-card-text);
+	background-color: var(--color-card-background);
+	padding: 1.5rem 2rem;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	/* padding-left: .25em;
+	padding-right: .5em; */
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+.postlist--articles > .postlist-item {
+	border-left: 10px solid var(--theme-color);
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+.logo-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	gap: 2rem;
+	font-family: var(--font-family-sans-serif);
+	margin: auto;
+}
+
+.logo-wrapper h1 {
+	font-size: 4rem;
+  	font-size: clamp(2.5rem,1rem + 5vw,4rem);
+	color: #fff;
+	margin: 0;
+}
+
+.logo-wrapper p {
+	color: #fff;
+	margin-top: 0.3rem;
+}
+
+.scroll-grid {
+	display:grid;
+	margin-top:3rem;
+	grid-gap:2rem;
+	grid-template-columns:repeat(auto-fit,minmax(30ch,1fr))
+}
+
+.scroll-grid li {
+	display:grid;
+	position:relative;
+	-ms-flex-line-pack:start;
+	align-content:start;
+	background-color:var(--color-alt);
+	border-bottom:2px dashed var(--color-primary);
+	padding:2rem clamp(.5rem,5%,2rem)
+}
+
+.scroll-grid li img {
+	object-fit: contain;
+	padding: .15rem;
+	max-width: 16.75rem;
+	height: auto;
+}
+
+@media (any-hover:none) and (any-pointer:coarse) {
+	.scroll-grid {
+		grid-auto-flow:column;
+		grid-gap:1rem;
+		grid-template-columns:unset;
+		overflow-x:auto;
+		-ms-scroll-snap-type:x mandatory;
+		scroll-snap-type:x mandatory;
+		-webkit-overflow-scrolling:touch
+	}
+	.scroll-grid li {
+		scroll-snap-align:center;
+		scroll-snap-stop:always;
+		width:min(45ch,75vw)
+	}
+}
+
+.page-header {
+	padding: 2.5rem 0;
+	text-align: center;
+}
+
+.page-header :last-child {
+	margin-bottom: 0;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+
+			<div class="container">
+
+				
+
+				<div class="nav-wrapper">
+
+					<a href="/" class="home-link home-link--small">
+						<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" class="logo" width="200" height="200"><path d="M192 0C85.961 0 0 85.961 0 192s85.961 192 192 192 192-85.961 192-192S298.039 0 192 0zm0 44c19.882 0 36 16.118 36 36s-16.118 36-36 36-36-16.118-36-36 16.118-36 36-36zm117.741 98.023c-28.712 6.779-55.511 12.748-82.14 15.807.851 101.023 12.306 123.052 25.037 155.621 3.617 9.26-.957 19.698-10.217 23.315-9.261 3.617-19.699-.957-23.316-10.217-8.705-22.308-17.086-40.636-22.261-78.549h-9.686c-5.167 37.851-13.534 56.208-22.262 78.549-3.615 9.255-14.05 13.836-23.315 10.217-9.26-3.617-13.834-14.056-10.217-23.315 12.713-32.541 24.185-54.541 25.037-155.621-26.629-3.058-53.428-9.027-82.141-15.807-8.6-2.031-13.926-10.648-11.895-19.249 2.031-8.601 10.647-13.926 19.249-11.895 96.686 22.829 124.283 22.783 220.775 0 8.599-2.03 17.218 3.294 19.249 11.895 2.029 8.601-3.297 17.219-11.897 19.249z" fill-rule="nonzero"/></svg>
+						A11Y Websites
+					</a>
+
+					
+<nav class="nav-primary" aria-labelledby="nav-heading">
+    <h2 id="nav-heading" class="visually-hidden">Top level navigation menu</h2>
+    <ul class="nav">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/showcase/">Showcase</a></li>
+        <li class="nav-item"><a href="/guides/" aria-current="page">Guides</a></li>
+    </ul>
+</nav>
+
+				</div>
+
+				
+
+			</div>
+
+		</header>
+
+		<main id="skip">
+			<div class="container">
+			<!-- Delete this message, it will also remove the component CSS from the bundle -->
+
+
+<div class="page-header">
+  <h1>Guides</h1>
+</div>
+
+<div class="page__content">
+    
+    
+        <div class="postlist--articles">
+            
+            <div class="postlist-item">
+              <h2><a href="/guides/2024-05-01-screenreaders/" class="postlist-link">Testing with screenreaders</a></h2>
+              <time class="postlist-date" datetime="2024-05-01">May 2024</time>
+            </div>
+            
+        </div>
+
+         
+
+    
+
+    <a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
+
+</div>
+
+			</div>
+		</main>
+
+		<footer></footer>
+
+		<!-- Current page: /guides/ -->
+	</body>
+</html>

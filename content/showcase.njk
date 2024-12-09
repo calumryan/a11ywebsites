@@ -1,4 +1,5 @@
 ---
+title: Showcase
 layout: layouts/home.njk
 eleventyNavigation:
   key: Showcase
@@ -8,16 +9,22 @@ eleventyImport:
 pagination:
   data: collections.showcase
   size: 6
-permalink: "different/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "showcase/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
-<h1>Showcase</h1>
+
+<div class="page-header">
+  <h1>Showcase</h1>
+</div>
 
 <div class="page__content">
     
     {% if pagination.items.length %}
-        <ul class="cards">
+        <ul class="postlist scroll-grid">
             {% for post in pagination.items %}
             <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+              {% if post.data.image %}
+              <img src="/images/screenshots/{{ post.data.image }}" width="640" height="360" loading="lazy" alt="" />
+              {% endif %}
               <a href="{{ post.data.link }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
               <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
             </li>

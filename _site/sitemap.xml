@@ -2,26 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://www.a11ywebsites.com/blog/firstpost/</loc>
-		<lastmod>2018-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/blog/secondpost/</loc>
-		<lastmod>2018-07-04</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/blog/thirdpost/</loc>
-		<lastmod>2018-08-24</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/blog/fourthpost/</loc>
-		<lastmod>2018-09-30</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://www.a11ywebsites.com/showcase/2020-10-31-inclusive-components/</loc>
 		<lastmod>2020-10-31</lastmod>
 	</url>
@@ -192,57 +172,37 @@
 	</url>
 	
 	<url>
-		<loc>https://www.a11ywebsites.com/blog/fifthpost/</loc>
-		<lastmod>2023-01-23</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/about/</loc>
-		<lastmod>2024-02-12</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/blog/</loc>
-		<lastmod>2024-02-12</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://www.a11ywebsites.com/</loc>
-		<lastmod>2024-02-12</lastmod>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://www.a11ywebsites.com/different/</loc>
-		<lastmod>2024-02-12</lastmod>
+		<loc>https://www.a11ywebsites.com/showcase/</loc>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://www.a11ywebsites.com/tags/</loc>
-		<lastmod>2024-02-12</lastmod>
+		<lastmod>2024-03-23</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://www.a11ywebsites.com/tags/guides/</loc>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://www.a11ywebsites.com/tags/showcase/</loc>
-		<lastmod>2024-02-12</lastmod>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://www.a11ywebsites.com/tags/another-tag/</loc>
-		<lastmod>2024-02-12</lastmod>
+		<loc>https://www.a11ywebsites.com/guides/2024-05-01-screenreaders/</loc>
+		<lastmod>2024-05-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://www.a11ywebsites.com/tags/number-2/</loc>
-		<lastmod>2024-02-12</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/tags/second-tag/</loc>
-		<lastmod>2024-02-12</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/tags/posts-with-two-tags/</loc>
-		<lastmod>2024-02-12</lastmod>
+		<loc>https://www.a11ywebsites.com/guides/</loc>
+		<lastmod>2024-05-05</lastmod>
 	</url>
 </urlset>

@@ -3,12 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
+		<title>{{ title }} – {{ metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+		<link rel="apple-touch-icon" href="{{ 'images/icon.png' | absoluteUrl(meta.url) }}" type="image/png" />
+		{# <link rel="shortcut icon" href="{{ 'images/favicon-300.png' | absoluteUrl(meta.url) }}" sizes="300x300" type="image/png" /> #}
+		<link rel="icon" href="{{ '/images/favicon-96.png' | absoluteUrl(meta.url) }}" sizes="96x96" type="image/png" />
+		<link rel="icon" href="{{ '/images/favicon-32.png' | absoluteUrl(meta.url) }}" sizes="32x32" type="image/png" />
+		<link rel="icon" href="{{ '/images/favicon-16.png' | absoluteUrl(meta.url) }}" sizes="16x16" type="image/png" />
+		<meta property="og:image" content="/images/cover.jpg">
+		<meta property="og:locale" content="en_gb">
+		<meta property="og:url" content="https://a11ywebsites.com/">
+
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
@@ -37,21 +51,49 @@
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-			</nav>
+			<div class="container">
+
+				{% if isHome == true %}
+				<div class="logo-wrapper">
+
+					<a href="/" class="home-link" aria-label="A11Y Websites - home">
+						{% include "logo.njk" %}
+					</a>
+
+					<div>
+
+						<h1>{{ metadata.title }}</h1>
+						<p>Your guide and inspiraton for accessible websites</p>
+
+						{% include "nav.njk" %}
+
+					</div>
+
+				</div>
+				{% else %}
+
+				<div class="nav-wrapper">
+
+					<a href="/" class="home-link home-link--small">
+						{% include "logo.njk" %}
+						A11Y Websites
+					</a>
+
+					{% include "nav.njk" %}
+
+				</div>
+
+				{% endif %}
+
+			</div>
+
 		</header>
 
 		<main id="skip">
+			<div class="container">
 			{{ content | safe }}
+			</div>
 		</main>
 
 		<footer></footer>

@@ -1,0 +1,45 @@
+---
+title: Guides
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Guides
+  order: 3
+eleventyImport:
+  collections: ["guides"]
+pagination:
+  data: collections.guides
+  size: 6
+permalink: "guides/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---
+
+<div class="page-header">
+  <h1>Guides</h1>
+</div>
+
+<div class="page__content">
+    
+    {% if pagination.items.length %}
+        <div class="postlist--articles">
+            {% for post in pagination.items %}
+            <div class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+              <h2><a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
+              <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if collections.guides.length > pagination.size %}
+            <nav class="pagination" aria-label="Pagination links">
+                {% if pagination.href.next %}<a class="nav__link" href="{{ pagination.href.next }}" data-direction="backwards">Later features</a>{% endif %}
+                {% if pagination.href.previous %}
+                <a class="nav__link" href="{{ pagination.href.previous }}" data-direction="forwards">Newer features</a>{% endif %}
+            </nav>
+        {% endif %} 
+
+    {% else %}
+        <p>No guidess yet.</p>
+    {% endif %}
+
+    <a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
+
+</div>
