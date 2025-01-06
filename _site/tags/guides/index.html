@@ -204,6 +204,12 @@ main {
 		font-size: 3.8rem;
 	}
 }
+@media print {
+	main h1 {
+		font-size: 2rem;
+		margin: auto;
+	}
+}
 header {
 	background-color: var(--theme-color);
 }
@@ -211,6 +217,11 @@ header:after {
 	content: "";
 	display: table;
 	clear: both;
+}
+@media print {
+	header {
+		display: none !important;
+	}
 }
 
 .links-nextprev {
@@ -519,6 +530,12 @@ h2 + .header-anchor {
 	margin: 0 auto;
 }
 
+@media print { 
+	.page-header {
+		padding-bottom: 0;
+	}
+}
+
 .page-header > * {
 	margin-bottom: 1.5rem;
 }
@@ -529,6 +546,15 @@ h2 + .header-anchor {
 
 .page-header > p {
 	font-size: 1.25rem;
+}
+
+.page-body {
+	max-width: var(--layout-max);
+	margin: 0 auto;
+}
+
+.page-body li {
+	line-height: 2;
 }
 
 .sr-skip-link {
@@ -614,7 +640,7 @@ h2 + .header-anchor {
 <ol reversed class="postlist">
 
 	<li class="postlist-item">
-		<a href="/guides/2024-05-01-screenreaders/" class="postlist-link">Testing with screenreaders</a>
+		<a href="/guides/2024-05-01-screenreaders/" class="postlist-link">Testing with screen readers</a>
 		<time class="postlist-date" datetime="2024-05-01">May 2024</time>
 	</li>
 

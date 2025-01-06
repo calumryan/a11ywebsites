@@ -353,6 +353,12 @@ main {
 		font-size: 3.8rem;
 	}
 }
+@media print {
+	main h1 {
+		font-size: 2rem;
+		margin: auto;
+	}
+}
 header {
 	background-color: var(--theme-color);
 }
@@ -360,6 +366,11 @@ header:after {
 	content: "";
 	display: table;
 	clear: both;
+}
+@media print {
+	header {
+		display: none !important;
+	}
 }
 
 .links-nextprev {
@@ -668,6 +679,12 @@ h2 + .header-anchor {
 	margin: 0 auto;
 }
 
+@media print { 
+	.page-header {
+		padding-bottom: 0;
+	}
+}
+
 .page-header > * {
 	margin-bottom: 1.5rem;
 }
@@ -678,6 +695,15 @@ h2 + .header-anchor {
 
 .page-header > p {
 	font-size: 1.25rem;
+}
+
+.page-body {
+	max-width: var(--layout-max);
+	margin: 0 auto;
+}
+
+.page-body li {
+	line-height: 2;
 }
 
 .sr-skip-link {
@@ -755,7 +781,7 @@ h2 + .header-anchor {
 		<main id="content">
 			<div class="container">
 			
-<article class="container">
+<article class="container page-body">
 <div class="page-header">
 	<h1>hey.georgie.nu</h1>
 	<div class="post-metadata">
