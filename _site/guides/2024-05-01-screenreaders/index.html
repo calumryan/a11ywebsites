@@ -348,6 +348,9 @@ main {
 
 }
 
+main h1 {
+	font-size: 2.8rem;
+}
 @media (min-width:40rem) {
 	main h1 {
 		font-size: 3.8rem;
@@ -413,7 +416,7 @@ code {
 /* Header */
 header {
 	display: flex;
-	gap: 1em .5em;
+	gap: 0 .5em;
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 2em;
@@ -702,6 +705,15 @@ h2 + .header-anchor {
 	margin: 0 auto;
 }
 
+.page-body h2,
+.page-body h3 {
+	margin-top: 3rem;
+}
+
+.page-body h2:first-of-type {
+	margin-top: 0;
+}
+
 .page-body li {
 	line-height: 2;
 }
@@ -747,7 +759,7 @@ h2 + .header-anchor {
 	<body>
 		<a href="#content" class="sr-skip-link">Skip to main content</a>
 
-		<header>
+		<header id="header">
 
 			<div class="container">
 
@@ -790,22 +802,42 @@ h2 + .header-anchor {
 </div>
 
 <h2 id="why-testing-with-screen-readers-is-important" tabindex="-1">Why testing with screen readers is important <a class="header-anchor" href="#why-testing-with-screen-readers-is-important">#</a></h2>
-<p>People with a visual impairment or cognitive impairments, such as dyslexia, rely on screen readers to read aloud webpage content and assist them in navigating through different pages, screens, sections, and interactive elements like form fields and controls.
-Using a screen reader to test a website or app is one of many approaches to help us gain a different perspective on how others consume information and interact with it. It can help us to identify issues early on and address them as soon as possible.</p>
+<p>People with a visual impairment or cognitive impairments, such as dyslexia, rely on screen readers to read aloud webpage content and assist them in navigating through different pages, screens, sections, and interactive elements like form fields and controls.</p>
+<p>Using a screen reader to test a website or app is one of many approaches to help us gain a different perspective on how others consume information and interact with it. It can help us to identify issues early on and address them as soon as possible.</p>
 <h2 id="choosing-a-screen-readers-to-test-with" tabindex="-1">Choosing a screen readers to test with <a class="header-anchor" href="#choosing-a-screen-readers-to-test-with">#</a></h2>
-<p>Many screen readers are freely available, and they come built-in with most operating systems for macOS, iOS and Windows.</p>
+<p>Many screen readers are freely available, and are built-in to most operating systems for macOS, Android, iOS, iPadOS and Windows.</p>
 <h3 id="screen-readers-for-mac" tabindex="-1">Screen readers for Mac <a class="header-anchor" href="#screen-readers-for-mac">#</a></h3>
-<p>VoiceOver is preinstalled on all the latest computers running Mac OS as well as devices running iOS.</p>
+<p>VoiceOver is on all macOS computers as well as devices running iOS ot iPadOS.</p>
 <p>Follow the guidance relevant to your system on apple.com for how to enable it:</p>
 <ul>
-<li><a href="https://support.apple.com/en-gb/guide/voiceover/vo2682/mac">Guidance for using VoiceOver on macOS (external link)</a></li>
-<li><a href="https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios">Guidance for using VoiceOver on iPhone (external link)</a></li>
-<li><a href="https://support.apple.com/en-gb/guide/ipad/ipad9a246749/ipados">Guidance for using VoiceOver on iPad (external link)</a></li>
+<li><a href="https://support.apple.com/en-gb/guide/voiceover/vo2682/mac">macOS VoiceOver guidance  (external link)</a></li>
+<li><a href="https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios">iPhone VoiceOver guidance (external link)</a></li>
+<li><a href="https://support.apple.com/en-gb/guide/ipad/ipad9a246749/ipados">iPad VoiceOver guidance (external link)</a></li>
 </ul>
+<p>Sometimes new users of screen readers can find the voice output overwhelming to begin with if they're not dependent on it. You can use the VoiceOver Utility within System settings to change the voice, speech rate and even mute it temporarily if you need to.</p>
 <h3 id="screen-readers-for-windows" tabindex="-1">Screen readers for Windows <a class="header-anchor" href="#screen-readers-for-windows">#</a></h3>
+<p>Narrator is a screen reader included with every copy of Microsoft Windows.</p>
+<p>Guidance is slightly different on how to use depending whether you use Windows 10 or 11:</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1#WindowsVersion=Windows_11">Windows 11 Narrator guidance (external link)</a></li>
+<li><a href="https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1#WindowsVersion=Windows_10">Windows 10 Narrator guidance (external link)</a></li>
+</ul>
+<p>Another screen readers that's freely available for Windows 8.1 and above is NVDA. You can <a href="https://www.nvaccess.org/download/">download NVDA (external link)</a> direct from the vendor's website, NV Access.</p>
+<p>Whilst not free, <a href="https://www.freedomscientific.com/products/software/jaws/">JAWS (external link)</a> is one of the most commonly used screen readers and include a time-limited trial per use for non-commercial users. There are different licenses available depending on your reason for it, and location.</p>
+<h3 id="screen-readers-for-android-and-ios" tabindex="-1">Screen readers for Android and iOS <a class="header-anchor" href="#screen-readers-for-android-and-ios">#</a></h3>
+<p>Both of the main operating systems for mobile and tablet devices include a screen reader.</p>
+<ul>
+<li>Android has TalkBack – <a href="https://support.google.com/accessibility/android/answer/6007100?hl%3Den">TalkBack guidance on Google.com</a></li>
+<li>iOS and iPadOS have VoiceOver – <a href="https://support.apple.com/en-us/111799">VoiceOver guidance for iOS/iPadOS on Apple.com</a></li>
+</ul>
 <h2 id="what-should-i-be-testing-for" tabindex="-1">What should I be testing for? <a class="header-anchor" href="#what-should-i-be-testing-for">#</a></h2>
-<h2 id="learn-the-keyboard-shortcuts" tabindex="-1">Learn the keyboard shortcuts <a class="header-anchor" href="#learn-the-keyboard-shortcuts">#</a></h2>
+<p>Use a screen reader to check that all content is accessible by giving particular attention to a website's structure, images, buttons and form controls.</p>
+<h2 id="learn-the-keyboard-shortcuts-and-touchscreen-gestures" tabindex="-1">Learn the keyboard shortcuts and touchscreen gestures <a class="header-anchor" href="#learn-the-keyboard-shortcuts-and-touchscreen-gestures">#</a></h2>
+<p>Screen readers include a predefined list of keyboard shortcuts and gestures, some of which can also be customised to user preference.</p>
+<p><a href="https://dequeuniversity.com/screenreaders/">Deque University provides a list of shortcuts and gestures</a> for all the most popular screen readers and how to setup keyboard navigation where required for some web browsers.</p>
 
+
+<a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
 </article>
 			</div>
 		</main>
