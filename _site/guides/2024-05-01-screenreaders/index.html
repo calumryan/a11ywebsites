@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Testing with screen readers – A11Y Websites</title>
+		<title>Testing with Screen Readers – A11Y Websites</title>
 		<meta name="description" content="Showcase of accessible websites.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="A11Y Websites">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="A11Y Websites">
@@ -754,6 +754,18 @@ h2 + .header-anchor {
     outline: 0;
     white-space: nowrap;
     text-decoration: none
+}
+
+.nav-top {
+	margin: auto;
+	display: inline-block;
+}
+
+.page-footer {
+	padding: 5rem 0;
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
 }</style>
 	</head>
 	<body>
@@ -795,7 +807,7 @@ h2 + .header-anchor {
 			
 <article class="container page-body">
 <div class="page-header">
-	<h1>Testing with screen readers</h1>
+	<h1>Testing with Screen Readers</h1>
 	<div class="post-metadata">
 		<time datetime="2024-05-01">May 2024</time>
 	</div>
@@ -830,19 +842,23 @@ h2 + .header-anchor {
 <li>Android has TalkBack – <a href="https://support.google.com/accessibility/android/answer/6007100?hl%3Den">TalkBack guidance on Google.com</a></li>
 <li>iOS and iPadOS have VoiceOver – <a href="https://support.apple.com/en-us/111799">VoiceOver guidance for iOS/iPadOS on Apple.com</a></li>
 </ul>
+<h3 id="assistivlabs-to-test-with-screen-readers-you-don-t-have" tabindex="-1">AssistivLabs to test with screen readers you don't have <a class="header-anchor" href="#assistivlabs-to-test-with-screen-readers-you-don-t-have">#</a></h3>
 <h2 id="what-should-i-be-testing-for" tabindex="-1">What should I be testing for? <a class="header-anchor" href="#what-should-i-be-testing-for">#</a></h2>
 <p>Use a screen reader to check that all content is accessible by giving particular attention to a website's structure, images, buttons and form controls.</p>
 <h2 id="learn-the-keyboard-shortcuts-and-touchscreen-gestures" tabindex="-1">Learn the keyboard shortcuts and touchscreen gestures <a class="header-anchor" href="#learn-the-keyboard-shortcuts-and-touchscreen-gestures">#</a></h2>
 <p>Screen readers include a predefined list of keyboard shortcuts and gestures, some of which can also be customised to user preference.</p>
 <p><a href="https://dequeuniversity.com/screenreaders/">Deque University provides a list of shortcuts and gestures</a> for all the most popular screen readers and how to setup keyboard navigation where required for some web browsers.</p>
 
-
-<a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
 </article>
 			</div>
 		</main>
 
-		<footer></footer>
+		<footer class="page-footer">
+			<div class="container">
+				<p>&copy; 2020-2025 A11Y Websites</p>
+				<a class="nav-top" href="#header" data-direction="up">Back to top of page</a>
+			</div>
+		</footer>
 
 		<!-- Current page: /guides/2024-05-01-screenreaders/ -->
 	</body>

@@ -754,6 +754,18 @@ h2 + .header-anchor {
     outline: 0;
     white-space: nowrap;
     text-decoration: none
+}
+
+.nav-top {
+	margin: auto;
+	display: inline-block;
+}
+
+.page-footer {
+	padding: 5rem 0;
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
 }</style>
 	</head>
 	<body>
@@ -803,13 +815,16 @@ h2 + .header-anchor {
 
 <p>Kitty's website almost meets grade overall with a simple but well-structured layout with good use of landmarks and meaningful link text. The main reason for failing to meet grade is due to poor colour contrast on some of the text which has a linear gradient with bright pink against a white background.</p>
 
-
-<a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
 </article>
 			</div>
 		</main>
 
-		<footer></footer>
+		<footer class="page-footer">
+			<div class="container">
+				<p>&copy; 2020-2025 A11Y Websites</p>
+				<a class="nav-top" href="#header" data-direction="up">Back to top of page</a>
+			</div>
+		</footer>
 
 		<!-- Current page: /showcase/2021-05-02-kittygiraudel/ -->
 	</body>

@@ -563,3 +563,15 @@ h2 + .header-anchor {
     white-space: nowrap;
     text-decoration: none
 }
+
+.nav-top {
+	margin: auto;
+	display: inline-block;
+}
+
+.page-footer {
+	padding: 5rem 0;
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
+}

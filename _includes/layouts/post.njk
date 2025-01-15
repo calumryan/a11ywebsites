@@ -14,7 +14,6 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
-<a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}

@@ -604,6 +604,18 @@ h2 + .header-anchor {
     outline: 0;
     white-space: nowrap;
     text-decoration: none
+}
+
+.nav-top {
+	margin: auto;
+	display: inline-block;
+}
+
+.page-footer {
+	padding: 5rem 0;
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
 }</style>
 	</head>
 	<body>
@@ -647,7 +659,7 @@ h2 + .header-anchor {
 
 <div class="page-header">
   <h1>Guides</h1>
-  <p class="post-description">Assessing a website's overall level of accessibility is a time-consuming process involving a combination of automated and manual testing, as well as user testing whenever possible. These guides offer an overview of the approach and methods you can use to evaluate your own website's accessibility.</p>
+  <p class="post-description">Assessing a website's overall level of accessibility can be a time-consuming process involving a combination of automated and manual testing, as well as user testing whenever possible. These guides offer an overview of the approach and methods you can use to begin evaluating your own website's level of accessibility.</p>
 </div>
 
 <div class="page__content">
@@ -656,8 +668,13 @@ h2 + .header-anchor {
         <div class="postlist--articles">
             
             <div class="postlist-item">
-              <h2><a href="/guides/2024-05-01-screenreaders/" class="postlist-link">Testing with screen readers</a></h2>
+              <h2><a href="/guides/2024-05-01-screenreaders/" class="postlist-link">Testing with Screen Readers</a></h2>
               <time class="postlist-date" datetime="2024-05-01">May 2024</time>
+            </div>
+            
+            <div class="postlist-item">
+              <h2><a href="/guides/2025-01-11-manual-accessibility-testing-for-websites/" class="postlist-link">Manual Accessibility Testing for Websites</a></h2>
+              <time class="postlist-date" datetime="2025-01-11">January 2025</time>
             </div>
             
         </div>
@@ -666,14 +683,17 @@ h2 + .header-anchor {
 
     
 
-    <a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
-
 </div>
 
 			</div>
 		</main>
 
-		<footer></footer>
+		<footer class="page-footer">
+			<div class="container">
+				<p>&copy; 2020-2025 A11Y Websites</p>
+				<a class="nav-top" href="#header" data-direction="up">Back to top of page</a>
+			</div>
+		</footer>
 
 		<!-- Current page: /guides/ -->
 	</body>

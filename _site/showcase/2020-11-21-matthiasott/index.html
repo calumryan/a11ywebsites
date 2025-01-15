@@ -754,6 +754,18 @@ h2 + .header-anchor {
     outline: 0;
     white-space: nowrap;
     text-decoration: none
+}
+
+.nav-top {
+	margin: auto;
+	display: inline-block;
+}
+
+.page-footer {
+	padding: 5rem 0;
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
 }</style>
 	</head>
 	<body>
@@ -803,13 +815,16 @@ h2 + .header-anchor {
 
 <p>Matthias Ott's website nearly meets grade overall aside from some issues with colour contrast for text placed directly over hero images along with some colours for headings and tags being too bright. Additionally the focus order for the Links archive doesn't have a sequential navigation order, including an <code>&lt;aside&gt;</code> landmark nested inside <code>&lt;article&gt;</code>. Font sizing and line space is good with all links underlined, making content easy to read and understandable.</p>
 
-
-<a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
 </article>
 			</div>
 		</main>
 
-		<footer></footer>
+		<footer class="page-footer">
+			<div class="container">
+				<p>&copy; 2020-2025 A11Y Websites</p>
+				<a class="nav-top" href="#header" data-direction="up">Back to top of page</a>
+			</div>
+		</footer>
 
 		<!-- Current page: /showcase/2020-11-21-matthiasott/ -->
 	</body>

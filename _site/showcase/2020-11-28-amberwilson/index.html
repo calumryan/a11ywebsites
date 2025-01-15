@@ -754,6 +754,18 @@ h2 + .header-anchor {
     outline: 0;
     white-space: nowrap;
     text-decoration: none
+}
+
+.nav-top {
+	margin: auto;
+	display: inline-block;
+}
+
+.page-footer {
+	padding: 5rem 0;
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
 }</style>
 	</head>
 	<body>
@@ -803,13 +815,16 @@ h2 + .header-anchor {
 
 <p>Amber's website almost meets grade overall with good colour contrast and text spacing. The Read page has some duplicate ARIA id properties, the scrollable regions don't gain focus with keyboard navigation and the secondary navigation for years sometimes didn't work consistently well across all browsers and screen readers. There are some minor best practice issues including the <code>&lt;footer role=&quot;contentinfo&quot;&gt;</code> landmark placed inside the <code>&lt;main&gt;</code> landmark.</p>
 
-
-<a class="nav__link nav__center" href="#header" data-direction="up">Back to top of page</a>
 </article>
 			</div>
 		</main>
 
-		<footer></footer>
+		<footer class="page-footer">
+			<div class="container">
+				<p>&copy; 2020-2025 A11Y Websites</p>
+				<a class="nav-top" href="#header" data-direction="up">Back to top of page</a>
+			</div>
+		</footer>
 
 		<!-- Current page: /showcase/2020-11-28-amberwilson/ -->
 	</body>
