@@ -476,7 +476,7 @@ h2 + .header-anchor {
 	height: auto;
 }
 
-@media (any-hover:none) and (any-pointer:coarse) {
+/* @media (any-hover:none) and (any-pointer:coarse) {
 	.scroll-grid {
 		grid-auto-flow:column;
 		grid-gap:1rem;
@@ -489,9 +489,9 @@ h2 + .header-anchor {
 	.scroll-grid li {
 		scroll-snap-align:center;
 		scroll-snap-stop:always;
-		/* width:min(45ch,75vw) */
+		width:min(45ch,75vw)
 	}
-}
+} */
 
 .page-header {
 	padding: 2.5rem 0;
