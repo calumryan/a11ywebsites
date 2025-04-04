@@ -13,6 +13,9 @@ More than likely there will be less obvious issues that can be difficult to find
 
 1. [Keyboard and other inputs](#1-keyboard-and-other-inputs)
 2. [Voice control](#2-voice-control)
+3. [Screen readers](#3-screen-readers)
+4. [Colour and display settings](#4-colour-and-display-settings)
+5. [Readability](#5-readability)
 
 ## 1. Keyboard and other inputs
 Many users cannot interact with a website using a mouse or touch screen. Therefore, it's essential to ensure that all features of your website can be accessed with a keyboard or other input methods, such as a switch device. 
@@ -43,7 +46,7 @@ Before you begin testing with a keyboard, check your system and different web br
 Make sure to test that users with touch screen devices, like iPhones, Android phones, or tablets, can interact with your website using alternative input methods. Connect the device to a Bluetooth keyboard and follow the same procedure as described above for keyboard testing.
 
 ## 2. Voice control
-Test that users can use spoken commands to interact with your website. This type of testing can help identify issues with the text labels for links, buttons and controls.
+Test that users can use spoken commands to interact with your website. This type of testing can be particularly helpful to identify issues with the text labels for links, buttons and controls. As with screen readers there is often a few seconds delay between making a command and the voice control software processing the command. This is why it's important to test with different voice control software and make sure your website works optimally for each.
 
 ### Voice Control for macOS and iOS
 For macOS and iOS users you can test with a built-in tool called Voice Control by accessing it from the Accessibility section of System Settings or from Accessibility Shortcuts in the menu bar if you have this enabled. For testing websites, Voice Control is only fully supported by Safari browser.
@@ -52,7 +55,10 @@ For macOS and iOS users you can test with a built-in tool called Voice Control b
 For Android users, you can use Google's Voice Access tool, which can be downloaded from the Play Store. For testing websites, this works best in combination with Chrome browser
 
 ## Dragon for Windows
+Dragon Professional isn't available for free, and has a high price tag, but if your budget allows, then it's definitely worthwhile testing with it or with older version that might be sourced at a lower price.  
 
+## Voice Access for Windows 11
+For Windows 11 users you can test with the built-in Voice Access feature. This can be started by pressing Windows key + U to open Accessibility settings where you'll find a link to Speech. Then you can locate the Voice Access option and toggle it on.
 
 ## 3. Screen readers
 
