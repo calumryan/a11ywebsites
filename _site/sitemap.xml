@@ -172,42 +172,42 @@
 	</url>
 	
 	<url>
-		<loc>https://www.a11ywebsites.com/guides/2024-05-01-screenreaders/</loc>
-		<lastmod>2024-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/guides/</loc>
-		<lastmod>2024-12-09</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://www.a11ywebsites.com/</loc>
-		<lastmod>2024-12-09</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.a11ywebsites.com/showcase/</loc>
-		<lastmod>2024-12-09</lastmod>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://www.a11ywebsites.com/tags/</loc>
-		<lastmod>2024-12-09</lastmod>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://www.a11ywebsites.com/tags/guides/</loc>
-		<lastmod>2024-12-09</lastmod>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://www.a11ywebsites.com/tags/showcase/</loc>
-		<lastmod>2024-12-09</lastmod>
+		<lastmod>2024-03-23</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://www.a11ywebsites.com/guides/2025-01-11-manual-accessibility-testing-for-websites/</loc>
-		<lastmod>2025-01-11</lastmod>
+		<loc>https://www.a11ywebsites.com/guides/</loc>
+		<lastmod>2025-04-04</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://www.a11ywebsites.com/guides/1-screenreaders/</loc>
+		<lastmod>2025-04-04</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://www.a11ywebsites.com/guides/2-manual-accessibility-testing-for-websites/</loc>
+		<lastmod>2025-04-04</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://www.a11ywebsites.com/showcase/</loc>
+		<lastmod>2025-04-04</lastmod>
 	</url>
 </urlset>

@@ -811,7 +811,7 @@ h2 + .header-anchor {
 <div class="page-header">
 	<h1>Manual Accessibility Testing for Websites</h1>
 	<div class="post-metadata">
-		Last updated <time datetime="2025-01-11">January 2025</time>
+		Last updated <time datetime="2025-04-04">April 2025</time>
 	</div>
 </div>
 
@@ -862,23 +862,35 @@ h2 + .header-anchor {
 <h3 id="dragon-for-windows" tabindex="-1">Dragon for Windows <a class="header-anchor" href="#dragon-for-windows">#</a></h3>
 <p>Dragon Professional isn't available for free, and has a high price tag, but if your budget allows, then it's definitely worthwhile testing with it or with older version that might be sourced at a lower price.</p>
 <h3 id="voice-access-for-windows" tabindex="-1">Voice Access for Windows <a class="header-anchor" href="#voice-access-for-windows">#</a></h3>
-<p>For Windows 11 users you can test with the built-in Voice Access feature. This can be started by pressing Windows key + U to open Accessibility settings where you'll find a link to Speech. Then you can locate the Voice Access option and turn it on.</p>
+<p>For Windows 11 users you can test with the built-in Voice Access feature. This can be started by pressing <code>Windows key + U</code> to open Accessibility settings where you'll find a link to Speech. Then you can locate the Voice Access option and turn it on.</p>
 <h2 id="3-screen-readers" tabindex="-1">3. Screen readers <a class="header-anchor" href="#3-screen-readers">#</a></h2>
 <p>Using a screen reader for testing helps you understand how it reads and navigates a page's content and structure. Aim to test with at least two different screen readers—one on Windows and one on macOS—and include testing on both Android and iOS devices as well.</p>
 <p>Testing screen readers on touch screen devices is important because users interact with content differently than on desktop—using gestures, like swipes and taps instead of a keyboard or mouse.</p>
-<p>For links to useful resources about how to run and shortcuts to use with screen readers, read our guide on <a href="/guides/screenreaders">Testing with Screen Readers</a>.</p>
+<p>For links to useful resources about how to run and shortcuts to use with screen readers, read our guide on <a href="/guides/1-screenreaders">Testing with Screen Readers</a>.</p>
 <h3 id="voiceover-for-macos-ipados-and-ios" tabindex="-1">VoiceOver for macOS, iPadOS and iOS <a class="header-anchor" href="#voiceover-for-macos-ipados-and-ios">#</a></h3>
 <p>All Apple Macs, iPhones, and iPads come with the VoiceOver screen reader built in.</p>
-<p>On a Mac, you can turn VoiceOver on or off by pressing Command (⌘) + F5, or by navigating to System Settings &gt; Accessibility &gt; VoiceOver and enabling it there.</p>
-<p>On an iPhone or iPad, go to Settings &gt; Accessibility &gt; VoiceOver and toggle it on.</p>
+<p>On a Mac, you can turn VoiceOver on or off by pressing <code>Command (⌘) + F5</code>, or by navigating to <code>System Settings &gt; Accessibility &gt; VoiceOver</code> and enabling it there.</p>
+<p>On an iPhone or iPad, go to <code>Settings &gt; Accessibility &gt; VoiceOver</code> and toggle it on.</p>
 <h3 id="narrator-nvda-and-jaws-for-windows" tabindex="-1">Narrator, NVDA and JAWS for Windows <a class="header-anchor" href="#narrator-nvda-and-jaws-for-windows">#</a></h3>
-<p>To run the built-in Windows Narrator, press Ctrl + Windows key + Enter, or go to Settings &gt; Accessibility &gt; Narrator and turn it on.</p>
-<p>For NVDA (NonVisual Desktop Access), download it from the official NV Access website, install it, and launch it by clicking the NVDA icon or pressing the assigned shortcut (usually Ctrl + Alt + N).</p>
-<p>For JAWS (Job Access With Speech), this requires a separate license; once installed, you can start it from the Start menu or by using its default shortcut, Insert + J.</p>
+<p>To run the built-in Windows Narrator, press <code>Ctrl + Windows key + Enter</code>, or go to <code>Settings &gt; Accessibility &gt; Narrator</code> and turn it on.</p>
+<p>For NVDA (NonVisual Desktop Access), download it from the official NV Access website, install it, and launch it by clicking the NVDA icon or pressing the assigned shortcut (usually <code>Ctrl + Alt + N</code>).</p>
+<p>For JAWS (Job Access With Speech), this requires a separate license; once installed, you can start it from the Start menu or by using its default shortcut, <code>Insert + J</code>.</p>
 <h3 id="talkback-for-android" tabindex="-1">TalkBack for Android <a class="header-anchor" href="#talkback-for-android">#</a></h3>
-<p>To run the TalkBack screen reader on Android devices, go to Settings &gt; Accessibility &gt; TalkBack and toggle it on. You can also activate it quickly by pressing both volume buttons for three seconds, if the accessibility shortcut is enabled.</p>
+<p>To run the TalkBack screen reader on Android devices, go to <code>Settings &gt; Accessibility &gt; TalkBack</code> and toggle it on. You can also activate it quickly by pressing both volume buttons for three seconds, if the accessibility shortcut is enabled.</p>
 <h2 id="4-colour-and-display-settings" tabindex="-1">4. Colour and display settings <a class="header-anchor" href="#4-colour-and-display-settings">#</a></h2>
+<p>Ensure that your website is usable for individuals with visual impairments and colour blindness.</p>
+<ol>
+<li>Start by checking colour contrast between text and background using tools like the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker (external link)</a> and <a href="https://www.whocanuse.com/">WhoCanUse (external link)</a>.</li>
+<li>Use simulators or browser extensions to view your content as someone with different types of colour blindness might, such as Deuteranopia or Protanopia.</li>
+<li>Test how your website responds to user display settings, including high contrast modes, dark mode, and custom font sizes. Try changing display settings via the operating system (e.g., Windows High Contrast Mode or macOS accessibility settings) and ensure your interface still displays correctly and remains navigable. Check for overlapping text, hidden content, or broken layouts.</li>
+</ol>
 <h2 id="5-readability" tabindex="-1">5. Readability <a class="header-anchor" href="#5-readability">#</a></h2>
+<ol>
+<li>Evaluate the clarity and simplicity of text using tools like the Flesch-Kincaid Grade Level or Hemingway Editor to ensure content is appropriate for the target audience, ideally aiming for a reading age of 9–11 years for general audiences.</li>
+<li>Check for plain language usage, avoiding jargon, complex sentence structures, and uncommon words.</li>
+<li>Check for good content hierarchy with proper use of headings, bullet points, and short paragraphs.</li>
+<li>Also remember to check readability of less obvious content like alternative text for images.</li>
+</ol>
 
 </article>
 			</div>
@@ -891,6 +903,6 @@ h2 + .header-anchor {
 			</div>
 		</footer>
 
-		<!-- Current page: /guides/2025-01-11-manual-accessibility-testing-for-websites/ -->
+		<!-- Current page: /guides/2-manual-accessibility-testing-for-websites/ -->
 	</body>
 </html>

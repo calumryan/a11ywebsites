@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Manual Accessibility Testing for Websites – A11Y Websites</title>
+		<title>Testing with Screen Readers – A11Y Websites</title>
 		<meta name="description" content="Showcase of accessible websites.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="A11Y Websites">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="A11Y Websites">
@@ -809,76 +809,47 @@ h2 + .header-anchor {
 			
 <article class="container page-body">
 <div class="page-header">
-	<h1>Manual Accessibility Testing for Websites</h1>
+	<h1>Testing with Screen Readers</h1>
 	<div class="post-metadata">
-		Last updated <time datetime="2025-01-11">January 2025</time>
+		Last updated <time datetime="2025-04-04">April 2025</time>
 	</div>
 </div>
 
-<h2 id="why-do-manual-accessibility-testing" tabindex="-1">Why do manual accessibility testing? <a class="header-anchor" href="#why-do-manual-accessibility-testing">#</a></h2>
-<p>To make a website as accessible as possible, we must perform manual tests throughout the lifetime of a website. Manual testing helps us to identify accessibility issues early on, and hopefully before they become a barrier for our users.</p>
-<p>Manual testing also offers a different perspective for everyone involved in testing so that we're able to experience allowing us to experience the various ways a website functions when using assistive technologies or customised configurations.</p>
-<p>More than likely there will be less obvious issues that can be difficult to find without lived experience of accessibility testing, aswell as understanding the context of a page and its content. This is why it's important to prioritise usability testing with real users alongside other testing methods.</p>
-<ol>
-<li><a href="#1-keyboard-and-other-inputs">Keyboard and other inputs</a></li>
-<li><a href="#2-voice-control">Voice control</a></li>
-<li><a href="#3-screen-readers">Screen readers</a></li>
-<li><a href="#4-colour-and-display-settings">Colour and display settings</a></li>
-<li><a href="#5-readability">Readability</a></li>
-</ol>
-<h2 id="1-keyboard-and-other-inputs" tabindex="-1">1. Keyboard and other inputs <a class="header-anchor" href="#1-keyboard-and-other-inputs">#</a></h2>
-<p>Many users cannot interact with a website using a mouse or touch screen. Therefore, it's essential to ensure that all features of your website can be accessed with a keyboard or other input methods, such as a switch device.</p>
-<p>Verify that you can navigate through all elements that should be tabbable using the tab key, ensuring a visible focus state. Additionally, check that controls and input fields can be activated with the keyboard space-bar control or Return key.</p>
-<p>Before you begin testing with a keyboard, check your system and different web browsers installed are configured to highlight items with the Tab key. Whilst Windows support tab-key navigation by default, Mac users may find it needs to be enabled in some browsers.</p>
-<h3 id="safari" tabindex="-1">Safari <a class="header-anchor" href="#safari">#</a></h3>
-<ol>
-<li>Launch Safari and navigate to the menu bar</li>
-<li>Select &quot;Settings&quot; from the Safari menu</li>
-<li>Go to the &quot;Advanced&quot; tab</li>
-<li>Enable the option to &quot;Press Tab to highlight each item on a webpage&quot;</li>
-</ol>
-<h3 id="google-chrome" tabindex="-1">Google Chrome <a class="header-anchor" href="#google-chrome">#</a></h3>
-<ol>
-<li>Open Google Chrome and navigate to the menu bar</li>
-<li>Select &quot;Settings&quot; from the Chrome menu</li>
-<li>Scroll down to the &quot;Appearance&quot; section</li>
-<li>Enable the option &quot;Pressing Tab on a webpage highlights links and form fields&quot;</li>
-</ol>
-<h3 id="firefox" tabindex="-1">Firefox <a class="header-anchor" href="#firefox">#</a></h3>
-<ol>
-<li>Open Firefox and navigate to the menu bar</li>
-<li>Select &quot;Settings&quot; from the Firefox menu</li>
-<li>Scroll down to the &quot;Browsing&quot; section</li>
-<li>Enable the option &quot;Use the tab key to move focus between form controls and links&quot;</li>
-</ol>
-<h3 id="tests-for-android-and-ios" tabindex="-1">Tests for Android and iOS <a class="header-anchor" href="#tests-for-android-and-ios">#</a></h3>
-<p>Make sure to test that users with touch screen devices, like iPhones, Android phones, or tablets, can interact with your website using alternative input methods. Connect the device to a Bluetooth keyboard and follow the same procedure as described above for keyboard testing</p>
-<h2 id="2-voice-control" tabindex="-1">2. Voice control <a class="header-anchor" href="#2-voice-control">#</a></h2>
-<p>Test that users can use spoken commands to interact with your website. This type of testing can be particularly helpful to identify issues with the text labels for links, buttons and controls. As with screen readers there is often a few seconds delay between making a command and the voice control software processing the command. This is why it's important to test with different voice control software and make sure your website works optimally for each.</p>
-<h3 id="voice-control-for-macos-and-ios" tabindex="-1">Voice Control for macOS and iOS <a class="header-anchor" href="#voice-control-for-macos-and-ios">#</a></h3>
-<p>For macOS and iOS users you can test with a built-in tool called Voice Control by accessing it from the Accessibility section of System Settings or from Accessibility Shortcuts in the menu bar if you have this enabled. For testing websites, Voice Control is only fully supported by Safari browser.</p>
-<h3 id="voice-access-for-android" tabindex="-1">Voice Access for Android <a class="header-anchor" href="#voice-access-for-android">#</a></h3>
-<p>For Android users, you can use Google's Voice Access tool, which can be downloaded from the Play Store. For testing websites, this works best in combination with Chrome browser</p>
-<h3 id="dragon-for-windows" tabindex="-1">Dragon for Windows <a class="header-anchor" href="#dragon-for-windows">#</a></h3>
-<p>Dragon Professional isn't available for free, and has a high price tag, but if your budget allows, then it's definitely worthwhile testing with it or with older version that might be sourced at a lower price.</p>
-<h3 id="voice-access-for-windows" tabindex="-1">Voice Access for Windows <a class="header-anchor" href="#voice-access-for-windows">#</a></h3>
-<p>For Windows 11 users you can test with the built-in Voice Access feature. This can be started by pressing Windows key + U to open Accessibility settings where you'll find a link to Speech. Then you can locate the Voice Access option and turn it on.</p>
-<h2 id="3-screen-readers" tabindex="-1">3. Screen readers <a class="header-anchor" href="#3-screen-readers">#</a></h2>
-<p>Using a screen reader for testing helps you understand how it reads and navigates a page's content and structure. Aim to test with at least two different screen readers—one on Windows and one on macOS—and include testing on both Android and iOS devices as well.</p>
-<p>Testing screen readers on touch screen devices is important because users interact with content differently than on desktop—using gestures, like swipes and taps instead of a keyboard or mouse.</p>
-<p>For links to useful resources about how to run and shortcuts to use with screen readers, read our guide on <a href="/guides/screenreaders">Testing with Screen Readers</a>.</p>
-<h3 id="voiceover-for-macos-ipados-and-ios" tabindex="-1">VoiceOver for macOS, iPadOS and iOS <a class="header-anchor" href="#voiceover-for-macos-ipados-and-ios">#</a></h3>
-<p>All Apple Macs, iPhones, and iPads come with the VoiceOver screen reader built in.</p>
-<p>On a Mac, you can turn VoiceOver on or off by pressing Command (⌘) + F5, or by navigating to System Settings &gt; Accessibility &gt; VoiceOver and enabling it there.</p>
-<p>On an iPhone or iPad, go to Settings &gt; Accessibility &gt; VoiceOver and toggle it on.</p>
-<h3 id="narrator-nvda-and-jaws-for-windows" tabindex="-1">Narrator, NVDA and JAWS for Windows <a class="header-anchor" href="#narrator-nvda-and-jaws-for-windows">#</a></h3>
-<p>To run the built-in Windows Narrator, press Ctrl + Windows key + Enter, or go to Settings &gt; Accessibility &gt; Narrator and turn it on.</p>
-<p>For NVDA (NonVisual Desktop Access), download it from the official NV Access website, install it, and launch it by clicking the NVDA icon or pressing the assigned shortcut (usually Ctrl + Alt + N).</p>
-<p>For JAWS (Job Access With Speech), this requires a separate license; once installed, you can start it from the Start menu or by using its default shortcut, Insert + J.</p>
-<h3 id="talkback-for-android" tabindex="-1">TalkBack for Android <a class="header-anchor" href="#talkback-for-android">#</a></h3>
-<p>To run the TalkBack screen reader on Android devices, go to Settings &gt; Accessibility &gt; TalkBack and toggle it on. You can also activate it quickly by pressing both volume buttons for three seconds, if the accessibility shortcut is enabled.</p>
-<h2 id="4-colour-and-display-settings" tabindex="-1">4. Colour and display settings <a class="header-anchor" href="#4-colour-and-display-settings">#</a></h2>
-<h2 id="5-readability" tabindex="-1">5. Readability <a class="header-anchor" href="#5-readability">#</a></h2>
+<h2 id="why-testing-with-screen-readers-is-important" tabindex="-1">Why testing with screen readers is important <a class="header-anchor" href="#why-testing-with-screen-readers-is-important">#</a></h2>
+<p>People with a visual impairment or cognitive impairments, such as dyslexia, rely on screen readers to read aloud webpage content and assist them in navigating through different pages, screens, sections, and interactive elements like form fields and controls.</p>
+<p>Using a screen reader to test a website or app is one of many approaches to help us gain a different perspective on how others consume information and interact with it. It can help us to identify issues early on and address them as soon as possible.</p>
+<h2 id="choosing-a-screen-readers-to-test-with" tabindex="-1">Choosing a screen readers to test with <a class="header-anchor" href="#choosing-a-screen-readers-to-test-with">#</a></h2>
+<p>Many screen readers are freely available, and are built-in to most operating systems for macOS, Android, iOS, iPadOS and Windows.</p>
+<h3 id="screen-readers-for-mac" tabindex="-1">Screen readers for Mac <a class="header-anchor" href="#screen-readers-for-mac">#</a></h3>
+<p>VoiceOver is on all macOS computers as well as devices running iOS ot iPadOS.</p>
+<p>Follow the guidance relevant to your system on apple.com for how to enable it:</p>
+<ul>
+<li><a href="https://support.apple.com/en-gb/guide/voiceover/vo2682/mac">macOS VoiceOver guidance (external link)</a></li>
+<li><a href="https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios">iPhone VoiceOver guidance (external link)</a></li>
+<li><a href="https://support.apple.com/en-gb/guide/ipad/ipad9a246749/ipados">iPad VoiceOver guidance (external link)</a></li>
+</ul>
+<p>Sometimes new users of screen readers can find the voice output overwhelming to begin with if they're not dependent on it. You can use the VoiceOver Utility within System settings to change the voice, speech rate and even mute it temporarily if you need to.</p>
+<h3 id="screen-readers-for-windows" tabindex="-1">Screen readers for Windows <a class="header-anchor" href="#screen-readers-for-windows">#</a></h3>
+<p>Narrator is a screen reader included with every copy of Microsoft Windows.</p>
+<p>Guidance is slightly different on how to use depending whether you use Windows 10 or 11:</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1#WindowsVersion=Windows_11">Windows 11 Narrator guidance (external link)</a></li>
+<li><a href="https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1#WindowsVersion=Windows_10">Windows 10 Narrator guidance (external link)</a></li>
+</ul>
+<p>Another screen readers that's freely available for Windows 8.1 and above is NVDA. You can <a href="https://www.nvaccess.org/download/">download NVDA (external link)</a> direct from the vendor's website, NV Access.</p>
+<p>Whilst not free, <a href="https://www.freedomscientific.com/products/software/jaws/">JAWS (external link)</a> is one of the most commonly used screen readers and include a time-limited trial per use for non-commercial users. There are different licenses available depending on your reason for it, and location.</p>
+<h3 id="screen-readers-for-android-and-ios" tabindex="-1">Screen readers for Android and iOS <a class="header-anchor" href="#screen-readers-for-android-and-ios">#</a></h3>
+<p>Both of the main operating systems for mobile and tablet devices include a screen reader.</p>
+<ul>
+<li>Android has TalkBack – <a href="https://support.google.com/accessibility/android/answer/6007100?hl%3Den">TalkBack guidance on Google.com</a></li>
+<li>iOS and iPadOS have VoiceOver – <a href="https://support.apple.com/en-us/111799">VoiceOver guidance for iOS/iPadOS on Apple.com</a></li>
+</ul>
+<h3 id="assistivlabs-to-test-with-screen-readers-you-don-t-have" tabindex="-1">AssistivLabs to test with screen readers you don't have <a class="header-anchor" href="#assistivlabs-to-test-with-screen-readers-you-don-t-have">#</a></h3>
+<h2 id="what-should-i-be-testing-for" tabindex="-1">What should I be testing for? <a class="header-anchor" href="#what-should-i-be-testing-for">#</a></h2>
+<p>Use a screen reader to check that all content is accessible by giving particular attention to a website's structure, images, buttons and form controls.</p>
+<h2 id="learn-the-keyboard-shortcuts-and-touchscreen-gestures" tabindex="-1">Learn the keyboard shortcuts and touchscreen gestures <a class="header-anchor" href="#learn-the-keyboard-shortcuts-and-touchscreen-gestures">#</a></h2>
+<p>Screen readers include a predefined list of keyboard shortcuts and gestures, some of which can also be customised to user preference.</p>
+<p><a href="https://dequeuniversity.com/screenreaders/">Deque University provides a list of shortcuts and gestures</a> for all the most popular screen readers and how to setup keyboard navigation where required for some web browsers.</p>
 
 </article>
 			</div>
@@ -891,6 +862,6 @@ h2 + .header-anchor {
 			</div>
 		</footer>
 
-		<!-- Current page: /guides/2025-01-11-manual-accessibility-testing-for-websites/ -->
+		<!-- Current page: /guides/1-screenreaders/ -->
 	</body>
 </html>

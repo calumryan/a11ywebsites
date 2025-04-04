@@ -16,7 +16,7 @@ VoiceOver is on all macOS computers as well as devices running iOS ot iPadOS.
 
 Follow the guidance relevant to your system on apple.com for how to enable it:
 
-- [macOS VoiceOver guidance  (external link)](https://support.apple.com/en-gb/guide/voiceover/vo2682/mac)
+- [macOS VoiceOver guidance (external link)](https://support.apple.com/en-gb/guide/voiceover/vo2682/mac)
 - [iPhone VoiceOver guidance (external link)](https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios)
 - [iPad VoiceOver guidance (external link)](https://support.apple.com/en-gb/guide/ipad/ipad9a246749/ipados)
 
