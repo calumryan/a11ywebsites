@@ -447,7 +447,12 @@ h2 + .header-anchor {
 	display:grid;
 	margin-top:3rem;
 	grid-gap:2rem;
-	grid-template-columns:repeat(auto-fit,minmax(30ch,1fr))
+}
+
+@media (min-width:40rem) {
+	.scroll-grid {
+		grid-template-columns:repeat(auto-fit,minmax(30ch,1fr))
+	}
 }
 
 .scroll-grid li {
@@ -576,4 +581,11 @@ h2 + .header-anchor {
 	display: flex;
 	flex-flow: column wrap;
 	text-align: center;
+}
+
+.pagination {
+	display: flex;
+	gap: 0 2em;
+	flex-flow:wrap;
+	justify-content: space-between;
 }
