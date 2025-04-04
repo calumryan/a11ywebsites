@@ -444,13 +444,15 @@ h2 + .header-anchor {
 }
 
 .scroll-grid {
-	display:grid;
+	display:flex;
+	flex-flow: column wrap;
 	margin-top:3rem;
-	grid-gap:2rem;
+	gap:2rem;
 }
 
 @media (min-width:40rem) {
 	.scroll-grid {
+		display:grid;
 		grid-template-columns:repeat(auto-fit,minmax(30ch,1fr))
 	}
 }
