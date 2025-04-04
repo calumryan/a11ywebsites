@@ -471,7 +471,8 @@ h2 + .header-anchor {
 .scroll-grid li img {
 	object-fit: contain;
 	padding: .15rem;
-	max-width: 16.75rem;
+	/* max-width: 16.75rem; */
+	max-width: 100%;
 	height: auto;
 }
 
