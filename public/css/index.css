@@ -489,7 +489,7 @@ h2 + .header-anchor {
 	.scroll-grid li {
 		scroll-snap-align:center;
 		scroll-snap-stop:always;
-		width:min(45ch,75vw)
+		/* width:min(45ch,75vw) */
 	}
 }
 
