@@ -40,9 +40,6 @@ Both of the main operating systems for mobile and tablet devices include a scree
 - Android has TalkBack – [TalkBack guidance on Google.com](https://support.google.com/accessibility/android/answer/6007100?hl%3Den)
 - iOS and iPadOS have VoiceOver – [VoiceOver guidance for iOS/iPadOS on Apple.com](https://support.apple.com/en-us/111799)
 
-### AssistivLabs to test with screen readers you don't have
-
-
 ## What should I be testing for?
 Use a screen reader to check that all content is accessible by giving particular attention to a website's structure, images, buttons and form controls.
 
