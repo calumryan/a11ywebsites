@@ -159,7 +159,7 @@ main {
 }
 
 main h1 {
-	font-size: 2.8rem;
+	font-size: 1.5rem;
 }
 @media (min-width:40rem) {
 	main h1 {
@@ -362,6 +362,14 @@ header {
 	font-size: 0.8125em; /* 13px /16 */
 	color: var(--color-gray-90);
 }
+.postlist-item h2 {
+	font-size: 1.2rem;
+}
+@media (min-width:40rem) {
+	.postlist-item h2 {
+		font-size: 1.8rem;
+	}
+}
 .postlist-date {
 	word-spacing: -0.5px;
 	margin-top: 1rem;
@@ -516,6 +524,10 @@ h2 + .header-anchor {
 
 .page-header > p {
 	font-size: 1.25rem;
+}
+
+.page-header h1{ 
+	word-break: break-all;
 }
 
 .page-body {
