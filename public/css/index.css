@@ -416,6 +416,13 @@ header {
 	margin-right: 1em;
 }
 
+.post-image {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto 2em auto;
+	display: block;
+}
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;

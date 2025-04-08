@@ -2,5 +2,5 @@ module.exports = {
 	tags: [
 		"showcase"
 	],
-	"layout": "layouts/post.njk",
+	"layout": "layouts/post.showcase.njk",
 };

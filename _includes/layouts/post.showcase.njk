@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+{# Only include the syntax highlighter CSS on blog posts #}
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+<article class="container page-body">
+<div class="page-header">
+	<h1>{{ title }}</h1>
+	<div class="post-metadata">
+		Last updated <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDateShort }}</time>
+	</div>
+</div>
+
+<img src="/images/screenshots/{{ image }}" width="640" height="360" loading="lazy" alt="" class="post-image" />
+
+{{ content | safe }}
+
+<div>
+    <a href="{{ page.link }}">Visit {{ title }}</a>
+<div>
+
+{%- if collections.guides  %}
+{%- set previousPost = collections.showcase | getPreviousCollectionItem %}
+{%- set nextPost = collections.showcase | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<ul class="pagination links-nextprev">
+	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+</ul>
+{%- endif %}
+{%- endif %}
+</article>
