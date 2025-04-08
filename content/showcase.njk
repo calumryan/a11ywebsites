@@ -9,6 +9,7 @@ eleventyImport:
 pagination:
   data: collections.showcase
   size: 6
+  reverse: true
 permalink: "showcase/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
