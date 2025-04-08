@@ -6,4 +6,4 @@ image: buckinghamshire.jpg
 
 ---
 
-Buckinghamshire Council website overall meets grade. Many areas of the site also meet grade with enhanced contrast, wording and readability. The site appears to use features from the GOV UK Design System which is a good foundation for making accessible websites.
+Buckinghamshire Council website has some enhanced contrast, wording and readability. The site appears to use features from the GOV UK Design System which is a good foundation for making accessible websites.
