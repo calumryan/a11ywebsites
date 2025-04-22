@@ -5,7 +5,7 @@
         {% if post.data.image %}
         <img src="/images/screenshots/{{ post.data.image }}" width="640" height="360" loading="lazy" alt="" />
         {% endif %}
-		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+		<a href="{{ post.url }}" class="postlist-link" aria-label="Review of {% if post.data.title %}{{ post.data.title }}{% else %}{{ post.url }}{% endif %}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
 		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
 	</li>
 {% endfor %}
