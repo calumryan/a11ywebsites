@@ -1,6 +1,5 @@
 {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-<nav class="nav-primary" aria-labelledby="nav-heading">
-    <h2 id="nav-heading" class="visually-hidden">Top level</h2>
+<nav class="nav-primary" aria-label="Top level">
     <ul class="nav">
     {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item"><a class="nav-item-link" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
