@@ -1,6 +1,6 @@
 ---
 title: danabyerly.com
-link: https://danabyerly.com
+site_link: https://danabyerly.com
 image: danabyerly.jpg
 
 

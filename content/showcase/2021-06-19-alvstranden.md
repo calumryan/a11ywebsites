@@ -1,6 +1,6 @@
 ---
 title: alvstranden.com
-link: https://alvstranden.com/
+site_link: https://alvstranden.com/
 image: alvstranden.jpg
 
 ---

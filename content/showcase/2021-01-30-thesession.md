@@ -1,6 +1,6 @@
 ---
 title: thesession.org
-link: https://thesession.org
+site_link: https://thesession.org
 image: thesession.jpg
 
 updated: yes

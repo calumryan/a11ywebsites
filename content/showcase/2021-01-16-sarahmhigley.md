@@ -1,6 +1,6 @@
 ---
 title: sarahmhigley.com
-link: https://sarahmhigley.com
+site_link: https://sarahmhigley.com
 image: sarahmhigley.jpg
 
 

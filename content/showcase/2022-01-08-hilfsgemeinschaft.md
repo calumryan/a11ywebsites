@@ -1,6 +1,6 @@
 ---
 title: hilfsgemeinschaft.at
-link: https://www.hilfsgemeinschaft.at
+site_link: https://www.hilfsgemeinschaft.at
 image: hilfsgemeinschaft.jpg
 
 ---

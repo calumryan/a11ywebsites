@@ -1,6 +1,6 @@
 ---
 title: Modern CSS Solutions
-link: https://moderncss.dev
+site_link: https://moderncss.dev
 image: moderncss.jpg
 
 

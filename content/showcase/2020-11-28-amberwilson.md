@@ -1,6 +1,6 @@
 ---
 title: amberwilson.co.uk
-link: https://amberwilson.co.uk
+site_link: https://amberwilson.co.uk
 image: amberwilson.jpg
 draft: true
 

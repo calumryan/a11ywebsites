@@ -1,6 +1,6 @@
 ---
 title: jshakespeare.com
-link: https://jshakespeare.com
+site_link: https://jshakespeare.com
 image: jshakespeare.jpg
 
 

@@ -5,7 +5,7 @@ layout: layouts/base.njk
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 <article class="container page-body">
-<div class="page-header">
+<div >
 	<h1>{{ title }}</h1>
 	<div class="post-metadata">
 		Last updated <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDateShort }}</time>
@@ -17,7 +17,7 @@ layout: layouts/base.njk
 {{ content | safe }}
 
 <div>
-    <a href="{{ page.link }}">Visit {{ title }}</a>
+    <a href="{{ site_link }}">Visit {{ title }}</a>
 <div>
 
 {%- if collections.guides  %}

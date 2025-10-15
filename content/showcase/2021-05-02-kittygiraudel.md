@@ -1,6 +1,6 @@
 ---
 title: kittygiraudel.com
-link: https://kittygiraudel.com/
+site_link: https://kittygiraudel.com/
 image: kittygiraudel.jpg
 
 ---

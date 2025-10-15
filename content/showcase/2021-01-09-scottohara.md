@@ -1,6 +1,6 @@
 ---
 title: scottohara.me
-link: https://www.scottohara.me
+site_link: https://www.scottohara.me
 image: scottohara.jpg
 
 

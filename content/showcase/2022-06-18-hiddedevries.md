@@ -1,6 +1,6 @@
 ---
 title: hiddedevries.nl
-link: https://hiddedevries.nl
+site_link: https://hiddedevries.nl
 image: hiddedevries.jpg
 updated: yes
 

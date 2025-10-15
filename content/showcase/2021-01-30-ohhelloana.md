@@ -1,6 +1,6 @@
 ---
 title: ohhelloana.blog
-link: https://ohhelloana.blog
+site_link: https://ohhelloana.blog
 image: ohhelloana.jpg
 updated: yes
 

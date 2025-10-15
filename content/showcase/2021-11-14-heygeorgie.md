@@ -1,6 +1,6 @@
 ---
 title: hey.georgie.nu
-link: https://hey.georgie.nu/
+site_link: https://hey.georgie.nu/
 image: heygeorgie.jpg
 updated: yes
 

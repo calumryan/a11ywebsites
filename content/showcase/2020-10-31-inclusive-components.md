@@ -1,6 +1,6 @@
 ---
 title: Inclusive Components
-link: https://inclusive-components.design/
+site_link: https://inclusive-components.design/
 image: inclusive-components.jpg
 
 
