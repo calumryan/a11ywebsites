@@ -19,7 +19,12 @@
 		<link rel="icon" href="{{ '/images/favicon-96.png' | absoluteUrl(meta.url) }}" sizes="96x96" type="image/png" />
 		<link rel="icon" href="{{ '/images/favicon-32.png' | absoluteUrl(meta.url) }}" sizes="32x32" type="image/png" />
 		<link rel="icon" href="{{ '/images/favicon-16.png' | absoluteUrl(meta.url) }}" sizes="16x16" type="image/png" />
+
+		{% if image %}
+		<meta property="og:image" content="/images/{{ image }}">
+		{% else %}
 		<meta property="og:image" content="/images/cover.jpg">
+		{% endif %}
 		<meta property="og:locale" content="en_gb">
 		<meta property="og:url" content="https://a11ywebsites.com/">
 
