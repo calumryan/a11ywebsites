@@ -25,8 +25,8 @@ layout: layouts/base.njk
 {%- set nextPost = collections.showcase | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
 <ul class="pagination links-nextprev">
-	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}"><span class="visually-hidden">Review of </span>{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}"><span class="visually-hidden">Review of </span>{{ nextPost.data.title }}</a></li>{% endif %}
 </ul>
 {%- endif %}
 {%- endif %}
