@@ -1,6 +1,6 @@
 # A11Y Websites
 
-Your guide and inspiraton for accessible websites
+Your guide and inspiration for accessible websites
 
 [a11ywebsites.com](https://www.a11ywebsites.com)
 
