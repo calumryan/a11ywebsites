@@ -27,6 +27,8 @@
 	--syntax-tab-size: 2;
 
 	--layout-max: 700px;
+
+	--showcase-anchor: #092036;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +46,8 @@
 
 		--color-card-text: var(--color-gray-20);
 		--color-card-background: #04192e;
+
+		--showcase-anchor: #092036;
 	}
 }
 
@@ -190,6 +194,18 @@ header:after {
 	list-style: none;
 	border-top: 1px dashed var(--color-gray-20);
 	padding: 1em 0;
+}
+
+.links-showcase {
+	text-align: center;
+}
+
+.links-showcase a {
+	background: var(--showcase-anchor);
+	padding: 1rem;
+	margin: 1rem auto;
+	display: inline-flex;
+	font-weight: 700;
 }
 
 table {
