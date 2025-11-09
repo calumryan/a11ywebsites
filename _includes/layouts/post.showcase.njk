@@ -16,9 +16,9 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
-<div>
+<div class="links-showcase">
     <a href="{{ site_link }}">Visit {{ title }}</a>
-<div>
+</div>
 
 {%- if collections.guides  %}
 {%- set previousPost = collections.showcase | getPreviousCollectionItem %}
