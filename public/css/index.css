@@ -28,7 +28,7 @@
 
 	--layout-max: 700px;
 
-	--showcase-anchor: #092036;
+	--showcase-anchor: #e0e0e0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -145,6 +145,13 @@ a:not(.decorlink, .nav-item-link) {
     text-decoration-thickness: 1px;
     text-underline-offset: .5rem
 }
+.links-showcase a {
+	background: var(--showcase-anchor);
+	padding: 1rem;
+	margin: 1rem auto;
+	display: inline-flex;
+	font-weight: 700;
+}
 a:focus-visible {
 	background-color: var(--focus-color);
 	outline: 3px solid rgba(0, 0, 0, 0);
@@ -198,14 +205,6 @@ header:after {
 
 .links-showcase {
 	text-align: center;
-}
-
-.links-showcase a {
-	background: var(--showcase-anchor);
-	padding: 1rem;
-	margin: 1rem auto;
-	display: inline-flex;
-	font-weight: 700;
 }
 
 table {
