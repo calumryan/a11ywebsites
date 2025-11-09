@@ -1,5 +1,5 @@
 ---
-title: annaecook.com
+title: Anna E Cook
 site_link: https://annaecook.com
 image: annaecook.jpg
 

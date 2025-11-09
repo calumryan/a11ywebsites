@@ -7,3 +7,5 @@ image: moderncss.jpg
 ---
 
 Stephanie Eckles' Modern CSS Solutions site is a great example of accessible web design done well with aesthetically pleasing colours and structure. Beyond its own accessibility merits, the site provides lots of great article to help developers create accessible, lightweight interfaces using modern CSS techniques without needing to resort to untidy, inaccessible hacks or Javascript reliant solutions.
+
+Just a minor improvement away from the homepage, the ‘M’ link in the header is ambiguous – it’s not obvious that it denotes the site name or serves as a homepage link.

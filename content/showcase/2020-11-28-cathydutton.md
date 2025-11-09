@@ -1,5 +1,5 @@
 ---
-title: cathydutton.co.uk
+title: Cathy Dutton
 site_link: https://cathydutton.co.uk
 image: cathydutton.jpg
 ---

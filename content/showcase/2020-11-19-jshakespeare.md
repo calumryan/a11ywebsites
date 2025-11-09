@@ -1,5 +1,5 @@
 ---
-title: jshakespeare.com
+title: James Shakespeare
 site_link: https://jshakespeare.com
 image: jshakespeare.jpg
 
