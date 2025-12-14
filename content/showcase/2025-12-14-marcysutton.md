@@ -1,6 +1,6 @@
 ---
 title: Marcy Sutton
-site_link: https://marcysutton.dev
+site_link: https://marcysutton.com
 image: marcysutton.jpg
 ---
 
